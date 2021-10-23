@@ -1,13 +1,21 @@
-import React from 'react'
+import React from "react";
 
-export default function Translations(
-    { surah, verse, audio, reflect, ayah, text, by }
-) {
+export default function Translations({
+    surah,
+    verse,
+    audio,
+    reflect,
+    ayah,
+    text,
+    by,
+}) {
     return (
         <>
             <div className="translations-left">
                 <div className="mx-auto translations-option">
-                    <div className="btn btn-secondary translations-number">{surah}:{verse}</div>
+                    <div className="btn btn-secondary translations-number">
+                        {surah}:{verse}
+                    </div>
                     <div className="btn btn-secondary translations-audio">
                         <audio loop>
                             <source src={audio} type="audio/mpeg" />
@@ -25,9 +33,9 @@ export default function Translations(
                 </div>
                 <div className="translations-text">
                     <p className="translations-text__latin">{text}</p>
-                    <p className="translations-text__by">— {by}</p>
+                    <p className="translations-text__by">{by}</p>
                 </div>
             </div>
         </>
-    )
+    );
 }
